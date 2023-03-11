@@ -28,7 +28,7 @@ export const Advices = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='container' role='main'>
       <blockquote>
         <p className='span'>
           <span>advice #117</span>
