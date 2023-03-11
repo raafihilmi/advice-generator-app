@@ -7,6 +7,7 @@ export const Advices = () => {
   const [text, setText] = useState(
     `"It's easy to sit up and take notice, what's difficult is getting up and taking action."`
   );
+  const [id, setId] = useState(117);
 
   // useEffect(() => {
   //   fetch('https://api.adviceslip.com/advice')
@@ -22,6 +23,7 @@ export const Advices = () => {
       .then((res) => res.json())
       .then((data) => {
         setText(`"${data.slip.advice}"`);
+        setId(`${data.slip.id}`);
         console.log(data.slip.advice);
       })
       .catch((err) => console.log(err));
@@ -31,7 +33,7 @@ export const Advices = () => {
     <div className='container'>
       <blockquote>
         <p className='span'>
-          <span>advice #117</span>
+          <span>advice #{id}</span>
         </p>
         <p className='advice'>{text}</p>
         <div className='divider'></div>
