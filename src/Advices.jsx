@@ -35,9 +35,9 @@ export const Advices = () => {
         </p>
         <p className='advice'>{text}</p>
         <div className='divider'></div>
-        <button className='btn' onClick={handleClick}>
-          <img src={dice} />
-        </button>
+        <div className='btn' onClick={handleClick}>
+          <img src={dice} alt='dice button for reroll advices' />
+        </div>
       </blockquote>
     </div>
   );
